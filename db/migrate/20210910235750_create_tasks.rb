@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration[6.1]
       t.string :category
       t.string :date
       t.boolean :completed
-      t.belong_to :job
+      t.belongs_to :job, null: false, foreign_key: true
 
       t.timestamps
     end

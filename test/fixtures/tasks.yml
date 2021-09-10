@@ -5,11 +5,11 @@ one:
   category: MyString
   date: MyString
   completed: false
-  job: 
+  job: one
 
 two:
   name: MyString
   category: MyString
   date: MyString
   completed: false
-  job: 
+  job: two
