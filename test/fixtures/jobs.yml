@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  role: MyString
+  listing_url: MyString
+  location: MyString
+  description: MyString
+  organization: one
+
+two:
+  role: MyString
+  listing_url: MyString
+  location: MyString
+  description: MyString
+  organization: two

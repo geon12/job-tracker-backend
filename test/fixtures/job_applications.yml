@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  notes: MyString
+  job: one
+  user: one
+  status: MyString
+  rejected: false
+  application_process: MyString
+
+two:
+  notes: MyString
+  job: two
+  user: two
+  status: MyString
+  rejected: false
+  application_process: MyString
