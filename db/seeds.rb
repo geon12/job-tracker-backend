@@ -7,8 +7,23 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Seeding"
+Task.destroy_all
+Contact.destroy_all
+JobApplication.destroy_all
 User.destroy_all
-User.create({username: "bobcat",password_digest:"abcde"})
-User.create({username:"monk",password_digest: "1234"})
-
+Job.destroy_all
+Organization.destroy_all
+user1 = User.create({username: "bobcat",password_digest:"abcde"})
+user2 = User.create({username:"monk",password_digest: "1234"})
+microsoft = Organization.create({name:"Mircosoft", description:"Tech Company",industry:"tech"})
+ea = Organization.create({name:"EA", description:"Makes video games",industry:"games"})
+job1 = Job.create({role:"game developer",listing_url:"www.ea.com/games",location:"USA",description:"Make video games",organization:ea})
+job2 = Job.create({role:"front end developer",listing_url:"www.microsoft.com/games",location:"USA",description:"Make software",organization:microsoft})
+app1 = JobApplication.create({notes:"djnnrgrjkwnrkejg",job:job1,user:user1,status:"Interviewing",rejected:false,application_process:"referred"})
+app2 = JobApplication.create({notes:"njvnjrrjngodvjew",job:job2,user:user2,status:"Submitted",rejected:false,application_process:"online"})
+Task.create({name:"Write cover letter",category:"before submitting",date:"12-28-21",completed:false,job_application:app1})
+Task.create({name:"Interview",category:"Interview stage",date:"12-02-21",completed:false,job_application:app2})
+Contact.create({name:"Mike",description:"hiring manager",phone_number:"492-212-8920",email:"njenf@fakeemail.com",job_application:app2})
+Contact.create({name:"Doug",description:"interviewer",phone_number:"492-212-8920",email:"njenf@fakeemail.com",job_application:app1})
 puts "Done seeding"
+
