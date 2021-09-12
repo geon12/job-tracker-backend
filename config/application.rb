@@ -40,5 +40,9 @@ module JobTrackerBackend
     config.middleware.use ActionDispatch::Session::CookieStore, secure: true
     
     config.action_dispatch.cookies_same_site_protection = :none
+
+    # config.middleware.use ActionDispatch::Session::CookieStore
+    
+    # config.action_dispatch.cookies_same_site_protection = :strict
   end
 end
