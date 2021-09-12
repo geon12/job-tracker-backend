@@ -41,4 +41,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'active_model_serializers'
 
-gem 'rails_same_site_cookie'
