@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :jobs, only: [:index,:show,:create]
   resources :organizations, only: [:index,:show,:create]
   #resources :users
-  # post "/signup",to: "users#create"
+  post "/signup",to: "users#create"
   get "/profile",to: "users#show"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
