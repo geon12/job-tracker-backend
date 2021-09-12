@@ -13,8 +13,8 @@ JobApplication.destroy_all
 User.destroy_all
 Job.destroy_all
 Organization.destroy_all
-user1 = User.create({username: "bobcat",password_digest:"abcde",name:"Bob Jones", email:"bob@fakeemail.com",location:"Maryland",job_title:"Software Engineer"})
-user2 = User.create({username:"monk",password_digest: "1234",name:"Ras Pan", email:"ras@fake.com",location:"UK",job_title:"artist"})
+user1 = User.create({username: "bobcat",password: "abcd", password_confirmation:"abcd",name:"Bob Jones", email:"bob@fakeemail.com",location:"Maryland",job_title:"Software Engineer"})
+user2 = User.create({username:"monk",password: "1234", password_confirmation:"1234",name:"Ras Pan", email:"ras@fake.com",location:"UK",job_title:"artist"})
 microsoft = Organization.create({name:"Mircosoft", description:"Tech Company",industry:"tech"})
 ea = Organization.create({name:"EA", description:"Makes video games",industry:"games"})
 job1 = Job.create({role:"game developer",listing_url:"www.ea.com/games",location:"USA",description:"Make video games",organization:ea})
