@@ -1,8 +1,8 @@
 class JobApplicationsController < ApplicationController
-    # def index
-    #     job_applications = @current_user.job_applications
-    #     render json: job_applications
-    # end
+    def index
+        job_applications = @current_user.job_applications
+        render json: job_applications
+    end
 
     def create
         job_application = @current_user.job_applications.create!(job_application_params)
