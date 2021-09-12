@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:3001', 'https://vast-citadel-94979.herokuapp.com'#change orgin to front-end during production
+    origins 'http://localhost:3001', 'https://jobtracker-app.netlify.app/'#change orgin to front-end during production
 
     resource '*',
       headers: :any,
