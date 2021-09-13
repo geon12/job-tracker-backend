@@ -1,6 +1,6 @@
 class JobSerializer < ActiveModel::Serializer
   attributes :id, :role, :listing_url, :location, :description
-  belongs_to: organization
+  belongs_to :organization
 end
 
 t.string "role"
