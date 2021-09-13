@@ -4,7 +4,7 @@ class JobApplicationsController < ApplicationController
         
         if @current_user
             job_applications = @current_user.job_applications
-            render json: job_applications, include: [:job,:organization]
+            render json: job_applications, include: ['job','job.organization']
         else
             render json: {errors: ['Not found']}, status: :not_found
         end
