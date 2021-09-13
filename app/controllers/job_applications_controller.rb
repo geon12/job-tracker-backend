@@ -1,6 +1,5 @@
 class JobApplicationsController < ApplicationController
 
-    skip_before_action :authorize, only: [:index]
     def index
         user = User.find_by(id: params[:user_id])
         if user
