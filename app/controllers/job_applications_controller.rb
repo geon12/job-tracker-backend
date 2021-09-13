@@ -1,7 +1,14 @@
 class JobApplicationsController < ApplicationController
+
+    skip_before_action :authorize, only: [:index]
     def index
-        job_applications = @current_user.job_applications
-        render json: job_applications
+        user = User.find_by(id: params[:user_id])
+        if user
+            job_applications = user.job_applications
+            render json: job_applications
+        else
+            render json: {errors: ['Not found']}, status: :not_found
+        end
     end
 
     def create
