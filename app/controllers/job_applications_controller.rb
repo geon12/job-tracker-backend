@@ -1,9 +1,9 @@
 class JobApplicationsController < ApplicationController
 
     def index
-        user = User.find_by(id: params[:user_id])
-        if user
-            job_applications = user.job_applications
+        
+        if @current_user
+            job_applications = @current_user.job_applications
             render json: job_applications
         else
             render json: {errors: ['Not found']}, status: :not_found
