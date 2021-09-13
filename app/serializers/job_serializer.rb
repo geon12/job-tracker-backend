@@ -3,7 +3,3 @@ class JobSerializer < ActiveModel::Serializer
   belongs_to :organization
 end
 
-t.string "role"
-    t.string "listing_url"
-    t.string "location"
-    t.string "description"
