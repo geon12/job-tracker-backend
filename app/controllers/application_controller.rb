@@ -2,7 +2,7 @@ class ApplicationController < ActionController::API
     include ActionController::Cookies
     
     before_action :authorize
-    #skip_before_action :verify_authenticity_token
+    
     private
 
     def authorize
