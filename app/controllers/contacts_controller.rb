@@ -11,8 +11,7 @@ class ContactsController < ApplicationController
         Contact.find(params[:id])
     end
 
-    def user_params
-        contact.permit(:name,:role,:phone_number,:email,:description)
+    def contact_params
+        params.permit(:name,:role,:phone_number,:email,:description)
     end
-end
 end
