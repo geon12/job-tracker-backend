@@ -21,8 +21,8 @@ job1 = Job.create({role:"game developer",listing_url:"www.ea.com/games",location
 job2 = Job.create({role:"front end developer",listing_url:"www.microsoft.com/games",location:"USA",description:"Make software",organization:microsoft})
 app1 = JobApplication.create({notes:"djnnrgrjkwnrkejg",job:job1,user:user1,status:"Interviewing",rejected:false,application_process:"referred"})
 app2 = JobApplication.create({notes:"njvnjrrjngodvjew",job:job2,user:user2,status:"Submitted",rejected:false,application_process:"online"})
-Task.create({name:"Write cover letter",category:"before submitting",date:"12-28-21",completed:false,job_application:app1})
-Task.create({name:"Interview",category:"Interview stage",date:"12-02-21",completed:false,job_application:app2})
+Task.create({name:"Write cover letter",category:"Cover Letter",date:"2021-10-28",completed:false,job_application:app1})
+Task.create({name:"Interview",category:"Interview",date:"2021-02-21",completed:false,job_application:app2})
 Contact.create({name:"Mike",role:"hiring manager", description: "nice guy",phone_number:"492-212-8920",email:"njenf@fakeemail.com",job_application:app2})
 Contact.create({name:"Doug",role:"interviewer",description:"Gave advice about technical interview",phone_number:"492-212-8920",email:"njenf@fakeemail.com",job_application:app1})
 puts "Done seeding"
