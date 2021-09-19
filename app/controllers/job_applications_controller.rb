@@ -18,7 +18,7 @@ class JobApplicationsController < ApplicationController
     def update
         job_application = find_job_application
         job_application.update(job_application_params)
-        render json: job_application
+        render json: job_application, include: ['job','job.organization','tasks','contacts']
     end
     
     private

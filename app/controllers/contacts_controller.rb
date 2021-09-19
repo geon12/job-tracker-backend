@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
     def update
         contact = find_contact
-        contact.update(contact_params)
+        contact.update!(contact_params)
         render json: contact
     end
 

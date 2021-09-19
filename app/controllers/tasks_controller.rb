@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
     def update
         task = find_task
-        task.update(task_params)
+        task.update!(task_params)
         render json: task
     end
 
