@@ -1,5 +1,5 @@
 class OrganizationsController < ApplicationController
-    def show
+    def index
         organizations = Organization.all
         render json: organizations
     end

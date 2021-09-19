@@ -13,12 +13,21 @@ class JobApplicationsController < ApplicationController
     def create
         job_application = @current_user.job_applications.create!(job_application_params)
         render json: job_application, status: :created
-      end
+    end
+
+    def update
+        job_application = find_job_application
+        job_application.update(job_application_params)
+        render json: job_application
+    end
     
-      private
-    
-      def job_application_params
-        params.permit(:notes, :application_process, :status,:rejected,:job,:user)
-      end
+    private
+    def find_job_application
+        JobApplication.find(params[:id])
+    end
+
+    def job_application_params
+        params.permit(:notes, :application_process, :status,:rejected,:job_id,:user_id)
+    end
 
 end

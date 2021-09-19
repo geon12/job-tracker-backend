@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-    def show
+    def index
         jobs = Job.all
         render json: jobs
     end
